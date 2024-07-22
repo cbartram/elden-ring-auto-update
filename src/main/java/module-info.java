@@ -7,7 +7,10 @@ module com.elden.ring.mod.eldenringautoupdate {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires static lombok;
+    requires com.fasterxml.jackson.databind;
+    requires org.apache.logging.log4j;
 
     opens com.elden.ring.mod.eldenringautoupdate to javafx.fxml;
     exports com.elden.ring.mod.eldenringautoupdate;
+    exports com.elden.ring.mod.eldenringautoupdate.model;
 }
