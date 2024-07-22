@@ -56,7 +56,7 @@
          </HBox>
          <HBox prefHeight="100.0" prefWidth="200.0">
             <children>
-               <CheckBox fx:id="makeAlias" mnemonicParsing="false" onAction="#handleMakeAlias" text="Make Exe Alias">
+               <CheckBox fx:id="makeAlias" mnemonicParsing="false" onAction="#handleMakeAlias" text="Make Shortcut">
                   <HBox.margin>
                      <Insets top="10.0" />
                   </HBox.margin>

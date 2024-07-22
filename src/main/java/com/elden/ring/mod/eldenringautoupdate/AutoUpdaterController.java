@@ -73,16 +73,51 @@ public class AutoUpdaterController implements Controller {
             FileOperations.moveFile(backupFile, erscSettingsIniFile);
         } catch(IOException e) {
             log.error("IOException while trying to move backup file for to original: {}", backupFile);
+            e.printStackTrace();
         }
 
         if(this.data.isMakeAlias()) {
-            String aliasDir= this.data.getSteamInstallLocation().getAbsolutePath() + File.separator + "Game" + File.separator;
-            FileOperations.copyFile(aliasDir + "ersc_launcher.exe", aliasDir + "Elden Ring Coop.exe");
+            String aliasDir = this.data.getSteamInstallLocation().getAbsolutePath() + File.separator + "Game" + File.separator;
+            System.out.println("Creating Shortcut for: " + aliasDir);
+            try {
+                createShortcut(aliasDir + "ersc_launcher.exe", aliasDir + "Elden Ring Coop.exe");
+            } catch (IOException | InterruptedException e) {
+                log.error("IOException while trying to create shortcut for alias: {}", aliasDir, e);
+                System.err.println("IOException while trying to create shortcut for alias: " + aliasDir + e.getMessage());
+                errorLabel.setStyle("-fx-text-fill: yellow;");
+                errorLabel.setText("ERSC Mod version " + coopModSelector.getValue() + " was installed but shortcut was not created.");
+                e.printStackTrace();
+            }
         }
 
         System.out.println("All file operations completed successfully.");
         errorLabel.setStyle("-fx-text-fill: green;");
         errorLabel.setText("ERSC Mod version " + coopModSelector.getValue() + " was successfully installed.");
+    }
+
+
+    public static void createShortcut(String targetPath, String shortcutPath) throws IOException, InterruptedException {
+        // Create a temporary batch script
+        String batchScript = "@" + System.lineSeparator() +
+                "mklink /J \"" + shortcutPath + "\" \"" + targetPath + "\"" + System.lineSeparator();
+
+        // Write the batch script to a temporary file
+        java.io.File tempFile = java.io.File.createTempFile("shortcut", ".bat");
+        java.io.FileWriter writer = new java.io.FileWriter(tempFile);
+        writer.write(batchScript);
+        writer.close();
+
+        // Execute the batch script
+        ProcessBuilder pb = new ProcessBuilder(tempFile.getAbsolutePath());
+        Process process = pb.start();
+        try {
+            process.waitFor();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Delete the temporary batch script
+        tempFile.delete();
     }
 
     @FXML
