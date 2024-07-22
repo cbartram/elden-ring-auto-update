@@ -25,12 +25,13 @@
                <Insets left="20.0" />
             </VBox.margin>
          </Label>
+         <Label fx:id="errorLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="303.0" textFill="#da0f0f" wrapText="true" />
       </children>
    </VBox>
    <VBox prefHeight="145.0" prefWidth="387.0">
       <children>
          <Label fx:id="installLocationLabel" />
-         <Button fx:id="selectInstallButton" mnemonicParsing="false" onAction="#onSelectInstallButtonClick" text="Select Elden Ring Install Location" textAlignment="CENTER">
+         <Button fx:id="selectInstallButton" mnemonicParsing="false" onAction="#handleSelectInstallLocation" text="Select Elden Ring Install Location" textAlignment="CENTER">
             <VBox.margin>
                <Insets left="40.0" />
             </VBox.margin>
@@ -42,7 +43,7 @@
          </Separator>
          <HBox prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label text="Select Coop Mod">
+               <Label text="Choose Zip">
                   <HBox.margin>
                      <Insets right="10.0" top="5.0" />
                   </HBox.margin>
@@ -55,7 +56,7 @@
          </HBox>
          <HBox prefHeight="100.0" prefWidth="200.0">
             <children>
-               <CheckBox fx:id="makeAlias" mnemonicParsing="false" text="Make Exe Alias">
+               <CheckBox fx:id="makeAlias" mnemonicParsing="false" onAction="#handleMakeAlias" text="Make Exe Alias">
                   <HBox.margin>
                      <Insets top="10.0" />
                   </HBox.margin>
@@ -65,5 +66,5 @@
       </children>
    </VBox>
    <Separator prefWidth="200.0" />
-   <Button fx:id="installButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="162.0" text="Install" />
+   <Button fx:id="installButton" mnemonicParsing="false" onAction="#handleInstallButtonClick" prefHeight="26.0" prefWidth="162.0" text="Install" />
 </VBox>

@@ -1,8 +1,10 @@
 package com.elden.ring.mod.eldenringautoupdate;
 
+import com.elden.ring.mod.eldenringautoupdate.model.Version;
+
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,9 +13,9 @@ public class EldenRingVersionParser {
     private static final String FILE_PREFIX = "Seamless Co-op v";
     private static final Pattern VERSION_PATTERN = Pattern.compile("v(\\d+)\\.(\\d+)\\.(\\d+)");
 
-    public static List<Version> parseVersions(String directoryPath) {
+    public static Map<String, String> parseVersions(String directoryPath) {
         File directory = new File(directoryPath);
-        List<Version> versions = new ArrayList<>();
+        Map<String, String> versionMap = new HashMap<>();
 
         if (directory.exists() && directory.isDirectory()) {
             File[] files = directory.listFiles();
@@ -22,14 +24,14 @@ public class EldenRingVersionParser {
                     if (file.isFile() && file.getName().startsWith(FILE_PREFIX)) {
                         Version version = parseVersion(file.getName());
                         if (version != null) {
-                            versions.add(version);
+                            versionMap.put(version.toString(), file.getName());
                         }
                     }
                 }
             }
         }
 
-        return versions;
+        return versionMap;
     }
 
     private static Version parseVersion(String fileName) {

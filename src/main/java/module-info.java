@@ -13,4 +13,5 @@ module com.elden.ring.mod.eldenringautoupdate {
     opens com.elden.ring.mod.eldenringautoupdate to javafx.fxml;
     exports com.elden.ring.mod.eldenringautoupdate;
     exports com.elden.ring.mod.eldenringautoupdate.model;
+    opens com.elden.ring.mod.eldenringautoupdate.model to javafx.fxml;
 }
