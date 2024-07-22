@@ -31,7 +31,7 @@ in `C:\SteamLibrary\steamapps\common\ELDEN RING`. Do **NOT** include the `Game` 
 
 Simply click the "Select Elden Ring Install Location" to bring up a file picker and choose your `ELDEN RING` directory.
 
-![./images/ersc_mod_manager.png](mod-manager-screenshot)
+![./images/ersc_mod_manager.png](./images/ersc_mod_manager.png)
 
 The mod manager will automatically look in your `Downloads` directory for any zip files for the Elden Ring Seamless Coop mod.
 Generally the correct and latest mod version should be selected however, if it is not you can use the "Choose Zip" button to select the version you would like to 
