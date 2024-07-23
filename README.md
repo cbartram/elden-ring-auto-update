@@ -2,6 +2,12 @@
    <img src="./images/er_image.jpg" height="300" width="400">
 </p>
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Elden Ring Seamless Coop Mod Manager
 
 The Elden Ring Seamless Coop Mod Manager is a Java application designed to simplify the process of managing and installing new versions of the Elden Ring Seamless Coop Mod. 
@@ -166,3 +172,14 @@ as soon as I am able!
 - Java FX - UI Library for Java
 - Lombok - Annotations for simplified Java development
 - Gradle - Build Tool
+
+[contributors-shield]: https://img.shields.io/github/contributors/cbartram/elden-ring-coop-mod-manager.svg?style=for-the-badge
+[contributors-url]: https://github.com/cbartram/elden-ring-coop-mod-manager/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/cbartram/elden-ring-coop-mod-manager.svg?style=for-the-badge
+[forks-url]: https://github.com/cbartram/elden-ring-coop-mod-manager/network/members
+[stars-shield]: https://img.shields.io/github/stars/cbartram/elden-ring-coop-mod-manager.svg?style=for-the-badge
+[stars-url]: https://github.com/cbartram/elden-ring-coop-mod-manager/stargazers
+[issues-shield]: https://img.shields.io/github/issues/cbartram/elden-ring-coop-mod-manager.svg?style=for-the-badge
+[issues-url]: https://github.com/cbartram/elden-ring-coop-mod-manager/issues
+[license-shield]: https://img.shields.io/github/license/cbartram/elden-ring-coop-mod-manager.svg?style=for-the-badge
+[license-url]: https://github.com/cbartram/elden-ring-coop-mod-manager/blob/master/LICENSE
