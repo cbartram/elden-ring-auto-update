@@ -1,3 +1,7 @@
+<p align="center">
+   <img src="./images/er_image.jpg" height="300" width="400">
+</p>
+
 # Elden Ring Seamless Coop Mod Manager
 
 The Elden Ring Seamless Coop Mod Manager is a Java application designed to simplify the process of managing and installing new versions of the Elden Ring Seamless Coop Mod. 
