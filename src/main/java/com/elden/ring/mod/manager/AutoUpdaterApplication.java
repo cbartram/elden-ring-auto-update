@@ -1,6 +1,6 @@
-package com.elden.ring.mod.eldenringautoupdate;
+package com.elden.ring.mod.manager;
 
-import com.elden.ring.mod.eldenringautoupdate.model.Controller;
+import com.elden.ring.mod.manager.model.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -30,8 +30,8 @@ public class AutoUpdaterApplication extends Application {
 
     @Override
     public void stop() {
-      log.info("Stopping application.");
-      autoUpdaterController.onExit();
+        log.info("Stopping application.");
+        autoUpdaterController.onExit();
     }
 
     public static void main(String[] args) {

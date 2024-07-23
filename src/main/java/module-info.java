@@ -1,4 +1,4 @@
-module com.elden.ring.mod.eldenringautoupdate {
+module com.elden.ring.mod.manager {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -10,8 +10,8 @@ module com.elden.ring.mod.eldenringautoupdate {
     requires com.fasterxml.jackson.databind;
     requires org.apache.logging.log4j;
 
-    opens com.elden.ring.mod.eldenringautoupdate to javafx.fxml;
-    exports com.elden.ring.mod.eldenringautoupdate;
-    exports com.elden.ring.mod.eldenringautoupdate.model;
-    opens com.elden.ring.mod.eldenringautoupdate.model to javafx.fxml;
+    opens com.elden.ring.mod.manager to javafx.fxml;
+    exports com.elden.ring.mod.manager;
+    exports com.elden.ring.mod.manager.model;
+    opens com.elden.ring.mod.manager.model to javafx.fxml;
 }

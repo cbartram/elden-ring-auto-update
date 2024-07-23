@@ -1,4 +1,4 @@
-package com.elden.ring.mod.eldenringautoupdate;
+package com.elden.ring.mod.manager;
 
 import java.io.IOException;
 import java.nio.file.Files;

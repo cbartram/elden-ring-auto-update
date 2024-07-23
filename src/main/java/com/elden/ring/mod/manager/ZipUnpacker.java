@@ -1,4 +1,4 @@
-package com.elden.ring.mod.eldenringautoupdate;
+package com.elden.ring.mod.manager;
 
 import java.io.*;
 import java.util.zip.ZipEntry;

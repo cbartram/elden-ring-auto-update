@@ -1,7 +1,7 @@
-package com.elden.ring.mod.eldenringautoupdate;
+package com.elden.ring.mod.manager;
 
-import com.elden.ring.mod.eldenringautoupdate.model.Controller;
-import com.elden.ring.mod.eldenringautoupdate.model.InstallData;
+import com.elden.ring.mod.manager.model.Controller;
+import com.elden.ring.mod.manager.model.InstallData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

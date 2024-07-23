@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="274.0" maxWidth="430.0" minHeight="210.0" minWidth="420.0" prefHeight="274.0" prefWidth="427.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.elden.ring.mod.eldenringautoupdate.AutoUpdaterController">
+<VBox alignment="CENTER" maxHeight="274.0" maxWidth="430.0" minHeight="210.0" minWidth="420.0" prefHeight="274.0" prefWidth="427.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.elden.ring.mod.manager.AutoUpdaterController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>

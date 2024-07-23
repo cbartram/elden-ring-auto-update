@@ -1,4 +1,4 @@
-package com.elden.ring.mod.eldenringautoupdate.model;
+package com.elden.ring.mod.manager.model;
 
 import lombok.Data;
 

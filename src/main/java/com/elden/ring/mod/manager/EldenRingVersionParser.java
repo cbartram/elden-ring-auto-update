@@ -1,6 +1,6 @@
-package com.elden.ring.mod.eldenringautoupdate;
+package com.elden.ring.mod.manager;
 
-import com.elden.ring.mod.eldenringautoupdate.model.Version;
+import com.elden.ring.mod.manager.model.Version;
 
 import java.io.File;
 import java.util.HashMap;
