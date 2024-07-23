@@ -4,11 +4,10 @@ plugins {
   id 'org.javamodularity.moduleplugin' version '1.8.12'
   id 'org.openjfx.javafxplugin' version '0.0.13'
   id 'org.beryx.jlink' version '2.25.0'
-  id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 group 'com.elden.ring.mod'
-version '1.0-SNAPSHOT'
+version '1.0.0-SNAPSHOT'
 
 repositories {
   mavenCentral()
@@ -67,35 +66,4 @@ jlink {
 
 jlinkZip {
   group = 'distribution'
-}
-
-// Add this block for creating the fat JAR
-shadowJar {
-  manifest {
-    attributes 'Main-Class': application.mainClass
-  }
-  mergeServiceFiles()
-  archiveClassifier.set('fat')
-}
-
-// Add this task to copy JavaFX dependencies into the fat JAR
-task copyJavaFXDependencies(type: Copy) {
-  from configurations.runtimeClasspath
-  into "build/libs/javafx-deps"
-  include "javafx*.jar"
-}
-
-// Make shadowJar depend on copyJavaFXDependencies
-shadowJar.dependsOn copyJavaFXDependencies
-
-// Modify the run task to use the fat JAR
-tasks.named('run') {
-  dependsOn shadowJar
-  doFirst {
-    jvmArgs = [
-            '--module-path', 'build/libs/javafx-deps',
-            '--add-modules', 'javafx.controls,javafx.fxml'
-    ]
-    classpath = files("build/libs/ersc-manager-${project.version}.jar")
-  }
 }
